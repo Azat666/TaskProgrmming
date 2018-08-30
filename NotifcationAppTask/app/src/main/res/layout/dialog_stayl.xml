@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_dialog"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_task"
+        android:textColor="@color/color"
+        android:textSize="@dimen/text_item_size_20"
+        android:textStyle="bold" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input"
+        android:layout_width="@dimen/width_200"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10">
+
+        <EditText
+            android:id="@+id/dialog_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_name"
+            android:textColor="@color/color_blue"
+            android:textColorHint="@color/color" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/width_200"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/date_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/ic_date" />
+
+        <ImageButton
+            android:id="@+id/time_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_toEndOf="@id/date_button"
+            android:background="@null"
+            android:src="@drawable/ic_access_time" />
+
+        <Spinner
+            android:id="@+id/spinner_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/color_blue"
+            android:entries="@array/Programming_language">
+
+        </Spinner>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@null"
+        android:src="@drawable/ic_cloud_done_black_24dp" />
+</LinearLayout>
